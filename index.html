@@ -10,7 +10,7 @@
     <button onclick="checkBirthday()">Er det Oscars fødselsdag?</button>
     <h1 id="message"></h1>
     <img id="frog"/>
-
+    <footer> This page was brought to you my mancScaped</footer>
     <script>
         function checkBirthday() {
             const today = new Date();
@@ -20,7 +20,7 @@
             const messageEl = document.getElementById("message");
             const pictureEl = document.getElementById("frog");
 
-            if (day === 30 && month === 5) {
+            if (day === 7 && month === 6) {
                 messageEl.textContent = "I dag er det Oscars fødselsdag!";
                 pictureEl.src = "images/birthdayfrog.jpg";
                 pictureEl.style.display = "block";
