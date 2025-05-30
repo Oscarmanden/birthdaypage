@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Oscars Fødselsdag</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <button onclick="checkBirthday()">Er det Oscars fødselsdag?</button>
+    <h1 id="message"></h1>
+    <img id="frog"/>
+
+    <script>
+        function checkBirthday() {
+            const today = new Date();
+            const day = today.getDate();
+            const month = today.getMonth() + 1;
+
+            const messageEl = document.getElementById("message");
+            const pictureEl = document.getElementById("frog");
+
+            if (day === 30 && month === 5) {
+                messageEl.textContent = "I dag er det Oscars fødselsdag!";
+                pictureEl.src = "images copy/birthdayfrog.jpg";
+                pictureEl.style.display = "block";
+                confetti(); 
+            } else {
+                messageEl.textContent = "I dag er det ikke Oscars fødselsdag.";
+                pictureEl.src = "images copy/sad-pepe.gif";
+                pictureEl.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
